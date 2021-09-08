@@ -1,0 +1,48 @@
+<div class="col-md-6">
+                                            <form action="doItem.php" method="get">
+                                                
+ 
+                                                <div class="row">
+                                                
+                                                    <div class="col-sm-4">
+                                                        <span class="input-group-text my-2">分類</span>
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                    <select class="form-control my-2" id="filterCatalog" name="page-option">
+                                                            <option value="-1"> none </option>
+                                                            <?php
+                                                            foreach ($catagoryId as $catIdItem) {
+                                                            ?>
+                                                                <option value="<?= $catIdItem ?>"><?= $catagoryName[$catIdItem] ?></option>
+                                                            <?php
+                                                            }
+                                                            ?>
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="row">
+                                                    <div class="col-sm-4">
+                                                        <span class="input-group-text my-2">最小價格</span>
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <input class="form-control my-2" type="number" name="low-limit" id="filterMinPrice">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-4">
+                                                        <span class="input-group-text my-2">最大價格</span>
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <input class="form-control my-2" type="number" name="up-limit" id="filterMaxPrice">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-4">
+                                                        <span class="input-group-text fs-4 my-2">庫存以上</span>
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <input class="form-control my-2" type="number" name="reserved" id="filterMinReserved">
+                                                    </div>
+                                                </div>
