@@ -1,2 +1,3 @@
 # Content-Management-System
-use PHP, Bootstrap and MySQL
+
+use PHP, Bootstrap and MySQL do CRUD function
